@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGC NET Education Papers – Download All</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg: #f4f6fb;
+    --white: #ffffff;
+    --navy: #1a2744;
+    --blue: #2563eb;
+    --blue-light: #eff6ff;
+    --green: #16a34a;
+    --green-light: #f0fdf4;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --muted: #64748b;
+    --badge: #dbeafe;
+    --badge-text: #1d4ed8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--navy);
+    color: white;
+    padding: 10px 24px;
+    font-size: 12px;
+    letter-spacing: .04em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .topbar span { opacity: .6; }
+  .topbar strong { color: #93c5fd; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1a2744 60%, #0f172a 100%);
+    color: white;
+    padding: 48px 24px 40px;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #bfdbfe;
+  }
+  .hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .hero h1 em { color: #60a5fa; font-style: normal; }
+  .hero p { color: #93c5fd; font-size: 14px; margin-bottom: 28px; }
+
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-n { font-size: 1.8rem; font-weight: 700; color: #60a5fa; }
+  .stat-l { font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: .06em; margin-top: 2px; }
+
+  /* ── HOW TO ── */
+  .howto {
+    background: #fff7ed;
+    border-bottom: 1px solid #fed7aa;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    color: #92400e;
+    flex-wrap: wrap;
+  }
+  .howto strong { color: #c2410c; }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 16px 64px;
+  }
+
+  /* ── YEAR SECTION ── */
+  .year-section { margin-bottom: 32px; }
+
+  .year-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .year-label h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .year-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .year-count {
+    font-size: 11px;
+    color: var(--muted);
+    background: var(--badge);
+    color: var(--badge-text);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    transition: box-shadow .15s, border-color .15s;
+  }
+  .card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+    border-color: #bfdbfe;
+  }
+
+  .card-left { flex: 1; min-width: 180px; }
+  .card-title {
+    font-weight: 600;
+    font-size: 14.5px;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+  .card-date {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: filter .15s, transform .1s;
+    white-space: nowrap;
+  }
+  .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); }
+
+  .btn-q {
+    background: var(--blue-light);
+    color: var(--blue);
+    border: 1.5px solid #93c5fd;
+  }
+  .btn-a {
+    background: var(--green-light);
+    color: var(--green);
+    border: 1.5px solid #86efac;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+  }
+  footer a { color: #60a5fa; text-decoration: none; }
+
+  @media (max-width: 480px) {
+    .card { flex-direction: column; align-items: flex-start; }
+    .btn { flex: 1; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <strong>NTA · UGC NET</strong>
+  <span>|</span>
+  <span>Education · Subject Code 09</span>
+  <span>|</span>
+  <span>Click any button below to download the PDF</span>
+</div>
+
+<div class="hero">
+  <div class="hero-badge">Previous Year Question Papers</div>
+  <h1>UGC NET <em>Education</em><br>Download Hub</h1>
+  <p>All sessions 2019–2026 · Question Papers + Answer Keys · Free PDF</p>
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">16</div><div class="stat-l">Sessions</div></div>
+    <div class="stat"><div class="stat-n">32</div><div class="stat-l">PDF Files</div></div>
+    <div class="stat"><div class="stat-n">7+</div><div class="stat-l">Years</div></div>
+  </div>
+</div>
+
+<div class="howto">
+  <span>💡</span>
+  <span><strong>How to download:</strong> Click the blue <strong>📄 Question Paper</strong> button or green <strong>✅ Answer Key</strong> button → PDF opens in a new tab → Press <strong>Ctrl+S</strong> (or tap the download icon) to save it.</span>
+</div>
+
+<main>
+
+  <!-- ══════════════════ 2025–2026 ══════════════════ -->
+  <div class="year-section">
+    <div class="year-label">
+      <h2>2025 – 2026</h2>
+      <div class="year-line"></div>
+      <span class="year-count">2 sessions</span>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">Dec 2025 Session</div>
+        <div class="card-date">📅 Held on 03 January 2026</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2026/04/UGC-NET-Education-Dec-2025-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2026/04/UGC-NET-Education-Dec-2025-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">June 2025 Session</div>
+        <div class="card-date">📅 Held on 25 June 2025</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/09/UGC-NET-Education-June-202525-June-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/09/UGC-NET-Education-June-202525-June-Answer-key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ 2024–2025 ══════════════════ -->
+  <div class="year-section">
+    <div class="year-label">
+      <h2>2024 – 2025</h2>
+      <div class="year-line"></div>
+      <span class="year-count">2 sessions</span>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">Dec 2024 Session</div>
+        <div class="card-date">📅 Held on 03 January 2025</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/1.-Dec-2024-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/1.-Dec-2024-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">June 2024 Session</div>
+        <div class="card-date">📅 Held on 22 August 2024</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/2.-June-2024-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/2.-June-2024-Question-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ 2023–2024 ══════════════════ -->
+  <div class="year-section">
+    <div class="year-label">
+      <h2>2023 – 2024</h2>
+      <div class="year-line"></div>
+      <span class="year-count">2 sessions</span>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">Dec 2023 Session</div>
+        <div class="card-date">📅 Held on 08 December 2023</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/3.-Dec-2023-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/3.-Dec-2023-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">June 2023 Session</div>
+        <div class="card-date">📅 Held on 19 June 2023</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/4.-June-2023-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/4.-June-2023-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ 2022–2023 ══════════════════ -->
+  <div class="year-section">
+    <div class="year-label">
+      <h2>2022 – 2023</h2>
+      <div class="year-line"></div>
+      <span class="year-count">3 sessions</span>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">Dec 2022 – Shift 1</div>
+        <div class="card-date">📅 Held on 14 March 2023</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/5.-Dec-2022-Shift-1-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/5.-Dec-2022-Shift-1-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">Dec 2022 – Shift 2</div>
+        <div class="card-date">📅 Held on 14 March 2023</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/6.-Dec-2022-Shift-2-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/6.-Dec-2022-Shift-2-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">June 2022 Session</div>
+        <div class="card-date">📅 Held on 12 October 2022</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/7.-June-2022-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/7.-June-2022-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ 2021 ══════════════════ -->
+  <div class="year-section">
+    <div class="year-label">
+      <h2>2021</h2>
+      <div class="year-line"></div>
+      <span class="year-count">2 sessions</span>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">Dec 2021 Session</div>
+        <div class="card-date">📅 Held on 03 December 2021</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/8.-Dec-2021-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/8.-Dec-2021-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">June 2021 – Combined Cycle</div>
+        <div class="card-date">📅 Held on 03 September 2021 (covers Dec 2020 + June 2021)</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/9.-June-2021-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/9.-June-2021-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ 2020 ══════════════════ -->
+  <div class="year-section">
+    <div class="year-label">
+      <h2>2020</h2>
+      <div class="year-line"></div>
+      <span class="year-count">1 session</span>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">June 2020 Session</div>
+        <div class="card-date">📅 Held on 12 November 2020</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/10.-June-2020-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/10.-June-2020-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ 2019 ══════════════════ -->
+  <div class="year-section">
+    <div class="year-label">
+      <h2>2019</h2>
+      <div class="year-line"></div>
+      <span class="year-count">2 sessions</span>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">Dec 2019 Session</div>
+        <div class="card-date">📅 Held on 03 December 2019</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/11.-Dec-2019-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/11.-Dec-2019-Answer-Key-1.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">June 2019 Session</div>
+        <div class="card-date">📅 Held on 21 June 2019</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/12.-June-2019-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/12.-June-2019-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ 2018 (bonus) ══════════════════ -->
+  <div class="year-section">
+    <div class="year-label">
+      <h2>2018 <span style="font-weight:400;color:var(--muted);font-size:13px;">(bonus)</span></h2>
+      <div class="year-line"></div>
+      <span class="year-count">2 sessions</span>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">Dec 2018 Session</div>
+        <div class="card-date">📅 Held on 19 December 2018</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/13.-Dec-2018-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/13.-Dec-2018-Answer-Key.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-left">
+        <div class="card-title">July 2018 Session</div>
+        <div class="card-date">📅 Held on 08 July 2018</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-q" href="https://humanperitus.in/wp-content/uploads/2025/08/14.-July-2018-Question-Paper.pdf" target="_blank">📄 Question Paper</a>
+        <a class="btn btn-a" href="https://humanperitus.in/wp-content/uploads/2025/08/14.-July-2018-Answer-Key-1.pdf" target="_blank">✅ Answer Key</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Source: <a href="https://humanperitus.in" target="_blank">humanperitus.in</a> &nbsp;·&nbsp;
+  Official papers via <a href="https://ugcnet.nta.nic.in" target="_blank">NTA UGC NET</a> &nbsp;·&nbsp;
+  Subject Code: 09 (Education)
+</footer>
+
+</body>
+</html>
